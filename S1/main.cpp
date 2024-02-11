@@ -3,16 +3,32 @@
 
 using namespace std;
 
+double gm(double a)
+{
+    if (a<0){ return -a;}
+    return a;
+}
+
+
+double tavan (double a , int tavan)
+{
+    double m=a;
+    for(int i=0 ; i<tavan ; i++)
+        a=a*m;
+    return a;    
+}
+
+
 class PositivePoint
 {
 private:
-    int m_x; // Member variable
-    int m_y;
+    double m_x; // Member variable
+    double m_y;
     bool m_values_arevalid;
 
 
 public:
-    PositivePoint(int x, int y)
+    PositivePoint(double x, double y)
     {
         m_values_arevalid = true;
         m_x = 0;
@@ -36,15 +52,15 @@ public:
         cout << "Destructor Called" << endl;
     }
 
-    int get_X() { return m_x; }
-    int get_Y() { return m_y; }
+    double get_X() { return m_x; }
+    double get_Y() { return m_y; }
 
-    void set_X(int x)
+    void set_X(double x)
     {
         if (x > 0)
             m_x = x;        
     }
-    void set_Y(int y)
+    void set_Y(double y)
     {
         if (y > 0)
             m_y = y;
@@ -79,6 +95,48 @@ public:
 };
 
 
+class cyrcle 
+{
+private:
+    double x_markaz ;
+    double y_markaz;
+    double r;
+    double markaz[2];
+
+public:
+    cyrcle(PositivePoint noghte_markaz, double shoa)
+    {
+        x_markaz= noghte_markaz.get_X();
+        y_markaz= noghte_markaz.get_Y();
+        markaz[0]=x_markaz;
+        markaz[1]=y_markaz;
+        r=shoa;
+    }    
+    double* moshakhasat() 
+    {
+        double h[5]={markaz[0],markaz[1],r,mohit(),masahat()};
+        return  h;
+    }
+    double x_bede() { return x_markaz;}
+    double y_bede() { return y_markaz;}
+    double shoa_bede() { return r ; }
+    double mohit() { return 2*M_PI*r ; }
+    double masahat() { return M_PI*r*r ; }
+    double fasele_dayere(const cyrcle& markaz_dayere_digar) 
+    {
+        return gm(sqrt(tavan(x_markaz-markaz_dayere_digar.x_markaz,2)+tavan(y_markaz-markaz_dayere_digar.y_markaz,2))-markaz_dayere_digar.r-r);
+    }
+    double fasele_noghte(PositivePoint noghte)
+    {
+        return gm(sqrt(tavan(x_markaz-noghte.get_X(),2)+tavan(y_markaz-noghte.get_Y(),2))-r);
+    }
+    ~cyrcle()
+    {
+        cout << "bale mibinid ke kar kard" << endl;
+        cout << "mohit = " << mohit() << " masahat =" << masahat() << endl;
+    }
+};
+
 class Triangle
 {
     PositivePoint m_p1;
@@ -105,8 +163,11 @@ int main()
         PositivePoint p7(9, 9);
         p7.print();
     } else {
-        PositivePoint p1(91, 91);
-        p1.print();
+        PositivePoint p(2,4);
+        cyrcle dayere(p1,2.0);
+        cyrcle circle(p,1);
+        cout << dayere.fasele_dayere(circle) << endl;
+        cout << dayere.fasele_noghte(p) << endl;
     }
     p1.print();
     cin >> x;
@@ -136,7 +197,6 @@ int main883()
     PositivePoint p3(p1);
     return 0;
 }
-
 
 // int main()
 // {
