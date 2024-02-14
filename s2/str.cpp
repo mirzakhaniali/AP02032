@@ -3,7 +3,7 @@
 class str
 {
     char * s;
-public:
+    int tool_s;
     void ssaz(const char * b)
     {
         int i=0 ; 
@@ -13,6 +13,17 @@ public:
             i++;
         }
     }
+    void ssaz(const char * b , int andaze)
+    {
+        int i=0 ; 
+        s=(char*)malloc(andaze*sizeof(char));
+        while (b[i]!=0)
+        {
+            s[i]=b[i];
+            i++;
+        }
+    }
+public:
     int tool(const char* b) const
     {
         int i =0 ;
@@ -20,16 +31,13 @@ public:
             i++;
         return i;
     }
-    int tool() const
+    int tool_bede() const
     {
-        int i =0 ;
-        while(s[i]!=0)
-            i++;
-        return i;
+        return tool_s;
     }
     char* sbede() const 
     {
-        char* r=(char*)malloc(sizeof(char)*tool());
+        char* r=(char*)malloc(sizeof(char)*tool_s);
         int i=0;
         while(s[i])
         {
@@ -41,22 +49,25 @@ public:
     str()
     {
         s=(char*)malloc(sizeof(char));
+        tool_s=0;
     }
     str(const char* a)
     {
-        s=(char*)malloc(tool(a)*sizeof(char));
+        tool_s=tool(a);
+        s=(char*)malloc(tool_s*sizeof(char));
         ssaz(a);
     }
     str(const str& a)
     {
-        s=(char*)malloc(a.tool()*sizeof(char));
+        tool_s=a.tool_bede();
+        s=(char*)malloc(tool_s*sizeof(char));
         ssaz(a.sbede());
     }
     void append(const char* a)
     {
-        char* r=(char*)malloc(sizeof(char)*(tool()+tool(a)));
+        char* r=(char*)malloc(sizeof(char)*(tool_s+tool(a)));
         int i=0,j=0;
-        while(i<tool())
+        while(i<tool_s)
         {
             r[i]=s[i];
             i++;
@@ -67,32 +78,86 @@ public:
             i++;
             j++;
         }
+        free(s);
+        s=r;
     }
     void append(const str& a)
     {
-        char* r=(char*)malloc(sizeof(char)*(tool()+a.tool()));
+        char* r=(char*)malloc(sizeof(char)*(tool_s+a.tool_s));
         int i=0,j=0;
-        while(i<tool())
+        while(i<tool_s)
         {
             r[i]=s[i];
             i++;
         }
-        char g=a.sbede()[0];
-        while(g)
+        while(a.sbede()[j])
         {
-            r[i]=g;
+            r[i]=a.sbede()[j];
             i++;
             j++;
-            g=a.sbede()[j];
         }
+        free(s);
+        s=r;
     }
     void print() const
     {
         int i =0 ;
-        while(i<tool())
+        while(i<tool_s)
         {
             printf("%c",s[i]);
             i++;
         }
+        printf("\n");
+    }
+    const char* chars() const
+    {
+        int i=0,j=0 ; 
+        while(s[i])
+        {
+            printf("%c",s[i]);
+            i++;
+        }
+        // while(s[i])
+        // // 32 همون اسپیسه.
+        // {    if(s[i]==32)
+        //         j++;
+        //     i++;
+        // }
+        // char r[j];
+        // i=0;
+        // while(s[i])
+        // {
+        //     if(s[i]!=32)
+        //     {   r[j]=s[i];
+        //         j++;
+        //     }
+        //     i++;
+        // }
+    }
+    void replace(char ooni_ke_hast , char ooni_ke_mishe)
+    {
+        int i=0;
+        while (s[i])
+        {
+            if (s[i]==ooni_ke_hast)
+                s[i]=ooni_ke_mishe;
+            i++;
+        }
+    }
+    
+    str* substr(int start , int count) const
+    {
+        int i=0;
+        char l[count+1];
+        // الان خب اینکه وسطش استرینگ بدم میپرسه داداش این که دادی خودمم و طولش نامشخص میشه که . 
+        // بعد اونوقت ارور میده نمیسازه که . 
+        while(i<=count)
+        {
+            l[i]=s[start+i-1];
+            i++;
+        }
+        str* r;
+        r->ssaz(l,count+1);
+        return r;
     }
 };
