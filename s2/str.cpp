@@ -39,11 +39,12 @@ public:
     {
         char* r=(char*)malloc(sizeof(char)*tool_s);
         int i=0;
-        while(s[i])
+        while(i<tool_s)
         {
             r[i]=s[i];
             i++;
         }
+        *(r+i)=0;
         return r;
     }
     str()
@@ -109,14 +110,14 @@ public:
         }
         printf("\n");
     }
-    const char* chars() const
-    {
-        int i=0,j=0 ; 
-        while(s[i])
-        {
-            printf("%c",s[i]);
-            i++;
-        }
+    // const char* chars() const
+    // {
+    //     int i=0,j=0 ; 
+    //     while(s[i])
+    //     {
+    //         printf("%c",s[i]);
+    //         i++;
+        // }
         // while(s[i])
         // // 32 همون اسپیسه.
         // {    if(s[i]==32)
@@ -133,7 +134,7 @@ public:
         //     }
         //     i++;
         // }
-    }
+    // }
     void replace(char ooni_ke_hast , char ooni_ke_mishe)
     {
         int i=0;
@@ -145,7 +146,7 @@ public:
         }
     }
     
-    str* substr(int start , int count) const
+    str substr(int start , int count) const
     {
         int i=0;
         char l[count+1];
@@ -153,11 +154,20 @@ public:
         // بعد اونوقت ارور میده نمیسازه که . 
         while(i<=count)
         {
-            l[i]=s[start+i-1];
+            l[i]=s[start+i];
             i++;
         }
-        str* r;
-        r->ssaz(l,count+1);
+        str r(l);
         return r;
     }
 };
+
+int main ()
+{
+    str s("ali");
+    s.print();
+    s.replace('a','b');
+    printf("%s\n",s.sbede());
+    printf("%s\n",s.substr(0,1).sbede());
+    return 0;
+}
