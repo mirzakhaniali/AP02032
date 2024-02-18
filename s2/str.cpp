@@ -161,3 +161,9 @@ public:
         return r;
     }
 };
+
+
+int main()
+{
+    str m("ali");
+}
