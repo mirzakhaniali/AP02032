@@ -162,6 +162,7 @@ public:
     }
 };
 
+<<<<<<< HEAD
 int main ()
 {
     str s("ali");
@@ -170,4 +171,10 @@ int main ()
     printf("%s\n",s.sbede());
     printf("%s\n",s.substr(0,1).sbede());
     return 0;
+=======
+
+int main()
+{
+    str m("ali");
+>>>>>>> 13a7509f3a23190de15567efecbc16eef9a0fe5d
 }
