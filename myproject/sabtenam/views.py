@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect , HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 
 def sign_up(request):
@@ -11,3 +11,7 @@ def sign_up(request):
     else:
         form = UserCreationForm()
     return render(request, 'sabtenam/safhe_sabtenam.html', {'form': form})
+
+def emtehani(request):
+    
+    return HttpResponse("bebinim khoda chi mikhad")
