@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Diagnostics.Contracts;
 
-public class university
+public class daneshgah : ja , daneshgahi , chapgar
 {
-    public string name{ get; set; }
     public string keshvar{ get; set; }
-    public string riasat{ get; set; }
     public List<daneshkade> daneshkadeList{ get; set; }
-    public List<modiriat> modiriats{ get; set; }
+    public List<setad> setadha{ get; set; }
 
     public void ezafe(daneshkade a)
     {
@@ -16,33 +14,38 @@ public class university
 
     public void kam(daneshkade a)
     {
-        if(daneshkadeList.FirstOrDefault(a) !=-1)
+        if(daneshkadeList.Remove(a))
             daneshkadeList.Remove(a);
     }
     
-    public void ezafe(modiriat a)
+    public void ezafe(setad a)
     {
-        modiriats.Add(a);
+        setadha.Add(a);
     }
 
-    public void kam(modiriat a)
+    public void kam(setad a)
     {
-        if(modiriats.FirstOrDefault(a) !=-1)
-            modiriats.Remove(a);
+        if(setadha.Remove(a))
+            setadha.Remove(a);
     }
 
-    public void chap()
+    public override void chap()
     {
-        System.Console.WriteLine($"{name} nam riasat {riasat} ");
+        System.Console.WriteLine($"daneshgahe {name}, be riasat {riasat}");
+        System.Console.WriteLine("ettelaate daneshkade ha :");
         for(int i = 0;i<daneshkadeList.Count;i++)
-        {
-            daneshkadeList[i].chap();
-        }
-        for(int i = 0;i<modiriats.Count;i++)
-        {
-            modiriats[i].chap();
-        }
+            this.daneshkadeList[i].chap();
+        System.Console.WriteLine("ettelaate tashakkol ha :  ");
+        for(int i = 0;i<setadha.Count;i++)
+            this.setadha[i].chap();
     }
-    
+
+    public daneshgah(string nam,person riasat , string keshvar , List<daneshkade> danesh , List<setad> setads)
+    : base(nam, riasat)
+    {
+        this.keshvar = keshvar;
+        this.setadha = setads;
+        this.daneshkadeList=danesh;
+    }
 
 }
