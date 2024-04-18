@@ -1,7 +1,8 @@
 using System.Collections;
+using System.Data.Common;
 
 
-public class ShapeClass
+public class ShapeClass:shapeinterface
 {
     public string name{ get; set; }
     public string color{ get; set; }
@@ -18,6 +19,21 @@ public class ShapeClass
         this.Y = y;
     }
 
+    public virtual double area()
+    {
+        return 0.00;
+    }
+
+    public virtual double perimeter()
+    {
+        return 0.00;
+    }
+
+    public virtual bool ispointinside(double x, double y)
+    {
+        return false;
+    }
+
     public ShapeClass(string name, string color, double x, double y)
     {
         this.name = name;
@@ -25,6 +41,7 @@ public class ShapeClass
         this.X = x;
         Y = y;
     }
+
 }
 
 interface shapeinterface
@@ -35,7 +52,7 @@ interface shapeinterface
 }
 
 
-public class circle: ShapeClass , shapeinterface
+public class circle: ShapeClass 
 {
     double radius{get; set; }
     public void radius_scale(double cheghad)
@@ -44,17 +61,17 @@ public class circle: ShapeClass , shapeinterface
         Y=Y*cheghad;
     }
 
-    public double area()
+    public override double area()
     {
         return radius*radius*(3.14);
     }
 
-    public double perimeter()
+    public override double perimeter()
     {
         return radius*2*(3.14);
     }
 
-    public bool ispointinside(double x, double y)
+    public override bool ispointinside(double x, double y)
     {
         return (radius*radius>X*X+Y*Y);
     }
@@ -66,8 +83,7 @@ public class circle: ShapeClass , shapeinterface
     }
 }
 
-
-public class rectangle:ShapeClass , shapeinterface
+public class rectangle:ShapeClass  
 {
     double width{get; set; }
     double height{get; set;}
@@ -81,17 +97,17 @@ public class rectangle:ShapeClass , shapeinterface
         height*=height;
     }
 
-    public double area()
+    public override double area()
     {
         return width*height;
     }
 
-    public double perimeter()
+    public override double perimeter()
     {
         return 2*(width+height);
     }
 
-    public bool ispointinside(double x, double y)
+    public override bool ispointinside(double x, double y)
     {
         return ((X<this.X+width/2&&X>this.X-width/2)&&(y<this.Y+height/2&&Y>this.Y-height/2));
     }
@@ -104,7 +120,7 @@ public class rectangle:ShapeClass , shapeinterface
     }
 }
 
-class square:ShapeClass,shapeinterface
+class square:ShapeClass
 {
     public double side{get; set; }
     public void side_scale(double cheghad)
@@ -112,17 +128,17 @@ class square:ShapeClass,shapeinterface
         this.side*=cheghad;
     }
 
-    public double area()
+    public override double area()
     {
         return side*side;
     }
 
-    public double perimeter()
+    public override double perimeter()
     {
         return 4*side;
     }
 
-    public bool ispointinside(double x, double y)
+    public override bool ispointinside(double x, double y)
     {
         return (X<this.X+side/2&&X>this.X-side/2)&&(y<this.Y+side/2&&Y>this.Y-side/2);
     }
@@ -133,3 +149,4 @@ class square:ShapeClass,shapeinterface
         this.side=side;
     }
 }
+

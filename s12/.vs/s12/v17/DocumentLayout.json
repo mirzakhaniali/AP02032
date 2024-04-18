@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\git\\AP02032\\s12\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E4BD47-A9E8-45F8-8AD0-D15E87170A59}|s12.csproj|c:\\git\\ap02032\\s12\\constructortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E4BD47-A9E8-45F8-8AD0-D15E87170A59}|s12.csproj|solutionrelative:constructortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E4BD47-A9E8-45F8-8AD0-D15E87170A59}|s12.csproj|c:\\git\\ap02032\\s12\\advancedexceptiontests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E4BD47-A9E8-45F8-8AD0-D15E87170A59}|s12.csproj|solutionrelative:advancedexceptiontests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7E4BD47-A9E8-45F8-8AD0-D15E87170A59}|s12.csproj|c:\\git\\ap02032\\s12\\exceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7E4BD47-A9E8-45F8-8AD0-D15E87170A59}|s12.csproj|solutionrelative:exceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConstructorTests.cs",
+              "DocumentMoniker": "C:\\git\\AP02032\\s12\\ConstructorTests.cs",
+              "RelativeDocumentMoniker": "ConstructorTests.cs",
+              "ToolTip": "C:\\git\\AP02032\\s12\\ConstructorTests.cs",
+              "RelativeToolTip": "ConstructorTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T17:05:28.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdvancedExceptionTests.cs",
+              "DocumentMoniker": "C:\\git\\AP02032\\s12\\AdvancedExceptionTests.cs",
+              "RelativeDocumentMoniker": "AdvancedExceptionTests.cs",
+              "ToolTip": "C:\\git\\AP02032\\s12\\AdvancedExceptionTests.cs",
+              "RelativeToolTip": "AdvancedExceptionTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T17:05:25.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExceptionHandler.cs",
+              "DocumentMoniker": "C:\\git\\AP02032\\s12\\ExceptionHandler.cs",
+              "RelativeDocumentMoniker": "ExceptionHandler.cs",
+              "ToolTip": "C:\\git\\AP02032\\s12\\ExceptionHandler.cs",
+              "RelativeToolTip": "ExceptionHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T17:05:22.347Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

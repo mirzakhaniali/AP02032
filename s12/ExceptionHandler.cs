@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.IO;
+using System.Reflection.Metadata;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using System.Text;
@@ -96,22 +97,25 @@ public class ExceptionHandler
 
     }
 
-    // public void OverflowExceptionMethod()
-    // {
-    //     try
-    //     {
-    //         if(this.Input!="10")
-    //         {
-    //             memory_kharab_kon6 a;
-    //         }
-    //     }
-    //     catch(OverflowException)
-    //     {
-    //         if(!DoNotThrow)
-    //             throw;
-    //         this.ErrorMsg=$"Caught exception {typeof(OverflowException)}";
-    //     }
-    // }
+    static int Bbb=0;
+
+    public void OverflowExceptionMethod()
+    {
+        Bbb++;
+        try
+        {    
+            int b=int.Parse(this.Input);
+            int k=b+1000;
+            System.Console.WriteLine(b+"        "+Bbb.ToString());
+        }
+        catch(OverflowException)
+        {
+            System.Console.WriteLine("error dad"+this.Input);
+            if(!DoNotThrow)
+                throw;
+            this.ErrorMsg=$"Caught exception {typeof(OverflowException)}";
+        }
+    }
 
     public void FormatExceptionMethod()
     {
@@ -254,12 +258,28 @@ public class ExceptionHandler
     [MethodImpl(MethodImplOptions.NoInlining)]
     public static void NestedMethods()
     {
-        #region TODO
-        #endregion
+        MethodA();
     }
 
-    #region TODO
-    #endregion
+    static void MethodA()
+    {
+        MethodB();
+    }
+
+    static void MethodB()
+    {
+        MethodC();
+    }
+
+    static void MethodC()
+    {
+        MethodD();
+    }
+
+    static void MethodD()
+    {
+        throw new NotImplementedException();
+    }
 }
 
 struct memory_kharab_kon()
@@ -336,7 +356,5 @@ struct memory_kharab_kon6()
     memory_kharab_kon5 k1;
     memory_kharab_kon5 k2;
     memory_kharab_kon5 k3;
-    memory_kharab_kon5 k4;
-    memory_kharab_kon5 k5;
-    memory_kharab_kon5 k;
+    memory_kharab_kon4 k4;
 }
