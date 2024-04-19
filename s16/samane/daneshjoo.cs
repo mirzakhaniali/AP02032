@@ -5,14 +5,20 @@ using System.Diagnostics.Contracts;
 public class daneshjoo: person , daneshjoi
 {
     public static int id{get;set;}=0;
-    public List<string> doroos {get; set;}
-    public List<int> nomarat {get; set;}
+    public List<string> doroos {get; set;} = new List<string>();
+    public List<int> nomarat {get; set;} = new List<int>();
 
-    public daneshjoo(int nId, string name,string LName,int Yob , int TId, List<string> doroos , List<int> nomarat)
+    public daneshjoo(string name,string LName,int Yob , List<string> doroos , List<int> nomarat)
     : base(daneshjoo.id++,name,LName,Yob)
     {
         this.doroos = doroos;
         this.nomarat = nomarat;
+        System.Console.WriteLine("shod");
+    }
+
+    public daneshjoo(string name,string LName,int Yob )
+    : base(daneshjoo.id++,name,LName,Yob)
+    {
         System.Console.WriteLine("shod");
     }
 

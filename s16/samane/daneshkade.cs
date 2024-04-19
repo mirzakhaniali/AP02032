@@ -2,12 +2,12 @@ using System;
 
 public class daneshkade : ja , chapgar , daneshkadei
 {
-    public List<ostad> asatid {get; set; }
-    public List<daneshjoo> daneshjoos {get; set;}
-    public List<karmand> karkonan {get; set; }
-    public List<setad> gorooh {get; set; }
+    public List<ostad> asatid {get; set; } = new List<ostad>();
+    public List<daneshjoo> daneshjoos {get; set;} = new List<daneshjoo>();
+    public List<karmand> karkonan {get; set; } = new List<karmand>();
+    public List<tashakkol> gorooh {get; set; } = new List<tashakkol>();
 
-    public daneshkade(string nam, person riasat, List<ostad> ostads , List<daneshjoo> daneshjoos , List<karmand> karmands , List<setad> setads)
+    public daneshkade(string nam, person riasat, List<ostad> ostads , List<daneshjoo> daneshjoos , List<karmand> karmands , List<tashakkol> setads)
     : base(nam, riasat)
     {
         this.asatid = ostads;
@@ -16,11 +16,16 @@ public class daneshkade : ja , chapgar , daneshkadei
         this.daneshjoos=daneshjoos;
     }
 
+    public daneshkade(string nam, person riasat)
+    : base(nam, riasat)
+    {
+    }
+
     public override void chap()
     {
-        System.Console.WriteLine($"daneshkade {base.chapsaz()} ba asatid :");
+        System.Console.WriteLine($"daneshkade {base.chapsaz()} ba asatide :");
         chapostad();
-        System.Console.WriteLine("ba daneshjoos : ");
+        System.Console.WriteLine("ba daneshjooyane : ");
         chapdaneshjoo();
         System.Console.WriteLine("ba karkonane : ");
         chapkarkonan();

@@ -19,7 +19,7 @@ public interface tashakkoli : daneshjoodar , chapgar
     public daneshjoo dabir {get; set;}
 }
 
-public interface daneshkadei : daneshjoodar , edari , setaddar , ostaddar , chapgar{}
+public interface daneshkadei : daneshjoodar , edari , tashakkoldar , ostaddar , chapgar{}
 
 public interface ostaddar 
 {
@@ -64,9 +64,8 @@ public interface daneshjoodar
     public void chapdaneshjoo();
 }
 
-public interface setaddar
+public interface tashakkoldar
 {
-    public List<setad> gorooh{ get; set; }
-    public void chapgorooh();
-    
+    public List<tashakkol> gorooh{ get; set; }
+    public void chapgorooh(); 
 }

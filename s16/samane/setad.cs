@@ -2,7 +2,7 @@ using System;
 
 public class setad : ja , setadi 
 {
-    public List<karmand> karkonan{get;set;}
+    public List<karmand> karkonan{get;set;} = new List<karmand>();
 
     public setad(string name,person riasat,List<karmand> karmands)
     :base(name,riasat)

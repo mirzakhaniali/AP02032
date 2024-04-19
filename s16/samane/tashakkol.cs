@@ -3,7 +3,7 @@ using System;
 public class tashakkol : ja, chapgar, tashakkoli    
 {
     public daneshjoo dabir { get; set; }
-    public List<daneshjoo> daneshjoos { get; set; }
+    public List<daneshjoo> daneshjoos { get; set; } = new List<daneshjoo>();
 
     public tashakkol(string name_daneshgah , daneshjoo dabir , List<daneshjoo> daneshjoos)
     : base(name_daneshgah)

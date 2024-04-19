@@ -4,8 +4,8 @@ using System.Diagnostics.Contracts;
 public class daneshgah : ja , daneshgahi , chapgar
 {
     public string keshvar{ get; set; }
-    public List<daneshkade> daneshkadeList{ get; set; }
-    public List<setad> setadha{ get; set; }
+    public List<daneshkade> daneshkadeList{ get; set; } = new List<daneshkade>();
+    public List<setad> setadha{ get; set; } = new List<setad> ();
 
     public void ezafe(daneshkade a)
     {
@@ -31,11 +31,11 @@ public class daneshgah : ja , daneshgahi , chapgar
 
     public override void chap()
     {
-        System.Console.WriteLine($"daneshgahe {name}, be riasat {riasat}");
+        System.Console.WriteLine($"daneshgahe {name}, be riasat {riasat.chapsaz()}");
         System.Console.WriteLine("ettelaate daneshkade ha :");
         for(int i = 0;i<daneshkadeList.Count;i++)
             this.daneshkadeList[i].chap();
-        System.Console.WriteLine("ettelaate tashakkol ha :  ");
+        System.Console.WriteLine("ettelaate setad ha : ");
         for(int i = 0;i<setadha.Count;i++)
             this.setadha[i].chap();
     }
@@ -47,5 +47,12 @@ public class daneshgah : ja , daneshgahi , chapgar
         this.setadha = setads;
         this.daneshkadeList=danesh;
     }
+
+    public daneshgah(string nam,person riasat , string keshvar )
+    : base(nam, riasat)
+    {
+        this.keshvar = keshvar;
+    }
+
 
 }

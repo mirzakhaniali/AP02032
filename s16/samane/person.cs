@@ -4,6 +4,7 @@ using System;
 public class person : chapgar
 {
     public int Id { get; set;}
+    public static int idp { get; set;}=0;
     public string fname { get; set;}
     public string lname { get; set;}
     public int yob{ get; set;}
