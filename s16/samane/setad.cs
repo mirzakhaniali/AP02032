@@ -12,7 +12,12 @@ public class setad : ja , setadi
 
     public void chap()
     {
-        System.Console.WriteLine($"name setad = {name} , riasat: {this.riasat.chapsaz()} va karkonan :");
+        Console.ForegroundColor = ConsoleColor.Green;
+        System.Console.WriteLine($"name setad = {name} ");
+        Console.ForegroundColor = ConsoleColor.White;
+        System.Console.WriteLine($"riasat: {this.riasat.chapsaz()}");
+        System.Console.WriteLine("va karkonan :");
+        Console.ForegroundColor = ConsoleColor.Red;
         this.chapkarkonan();
     }
 

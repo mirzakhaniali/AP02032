@@ -23,15 +23,23 @@ public class daneshkade : ja , chapgar , daneshkadei
 
     public override void chap()
     {
-        System.Console.WriteLine($"daneshkade {base.chapsaz()} ba asatide :");
+        string[] chapi=base.chapsaz().Split(',');
+        Console.ForegroundColor=ConsoleColor.Green;
+        System.Console.WriteLine($"daneshkade {chapi[0]}");
+        Console.ForegroundColor = ConsoleColor.White;
+        System.Console.WriteLine($"{chapi[1]}");
+        System.Console.WriteLine("ba asatide :");
+        Console.ForegroundColor = ConsoleColor.Yellow;
         chapostad();
         System.Console.WriteLine("ba daneshjooyane : ");
+        Console.ForegroundColor = ConsoleColor.Blue;
         chapdaneshjoo();
         System.Console.WriteLine("ba karkonane : ");
+        Console.ForegroundColor = ConsoleColor.Red;
         chapkarkonan();
         System.Console.WriteLine("ba tashakkol haye daneshjoyi : ");
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
         chapgorooh();
-        
     }
 
     public void chapgorooh()

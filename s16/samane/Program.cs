@@ -30,9 +30,6 @@ public class Maini
         List<daneshkade> daneshkades= new List<daneshkade>{kampiuter};
         daneshgah ElmoSanaat = new daneshgah("Elm o Sanaat" , rayis_daneshgah , "Iran" , daneshkades , setads);
         bool che_khabar=true;
-
-        Console.BackgroundColor = ConsoleColor.Green;
-        Console.ForegroundColor = ConsoleColor.Black;
         string baraye_while;
         while(che_khabar)
         {

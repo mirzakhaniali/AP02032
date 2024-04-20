@@ -14,6 +14,7 @@ public class karmand : person , chapgar
 
     public override void chap()
     {
+        Console.ForegroundColor = ConsoleColor.Red;   
         System.Console.WriteLine($"{base.chapsaz()} , hoghoogh : {this.hoghoogh}");
     }
 }
