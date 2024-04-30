@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="TestData\AddTest.txt" />
+    <None Remove="TestData\DivideTest.txt" />
+    <None Remove="TestData\ExpressionTest1.txt" />
+    <None Remove="TestData\ExpressionTest2.txt" />
+    <None Remove="TestData\ExpressionTest3.txt" />
+    <None Remove="TestData\MultiplyTest.txt" />
+    <None Remove="TestData\NegateTest.txt" />
+    <None Remove="TestData\SubtractTest.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.1.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\a8\a8.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="TestData\AddTest.txt" />
+    <Resource Include="TestData\DivideTest.txt" />
+    <Resource Include="TestData\ExpressionTest1.txt" />
+    <Resource Include="TestData\ExpressionTest2.txt" />
+    <Resource Include="TestData\ExpressionTest3.txt" />
+    <Resource Include="TestData\MultiplyTest.txt" />
+    <Resource Include="TestData\NegateTest.txt" />
+    <Resource Include="TestData\SubtractTest.txt" />
+  </ItemGroup>
+
+</Project>

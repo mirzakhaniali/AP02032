@@ -1,0 +1,1 @@
+namespace a8test;
