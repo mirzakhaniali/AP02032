@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\git\\AP02032\\a8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4478B579-1AE4-46A0-B7C7-BCE3693C2D43}|a8test\\a8test.csproj|c:\\git\\ap02032\\a8\\a8test\\operatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4478B579-1AE4-46A0-B7C7-BCE3693C2D43}|a8test\\a8test.csproj|solutionrelative:a8test\\operatortests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OperatorTests.cs",
+              "DocumentMoniker": "C:\\git\\AP02032\\a8\\a8test\\OperatorTests.cs",
+              "RelativeDocumentMoniker": "a8test\\OperatorTests.cs",
+              "ToolTip": "C:\\git\\AP02032\\a8\\a8test\\OperatorTests.cs",
+              "RelativeToolTip": "a8test\\OperatorTests.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwAUAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T13:41:47.164Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

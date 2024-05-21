@@ -29,6 +29,7 @@ public class Maini
         daneshkade kampiuter = new daneshkade("campiuter" , riasat_daneshkade , asatid_campiuter, salatin_bela_monazee ,karmands,tashakkols);
         List<daneshkade> daneshkades= new List<daneshkade>{kampiuter};
         daneshgah ElmoSanaat = new daneshgah("Elm o Sanaat" , rayis_daneshgah , "Iran" , daneshkades , setads);
+        
         bool che_khabar=true;
         string baraye_while;
         while(che_khabar)
@@ -74,6 +75,7 @@ public class Maini
                     che_khabar=false;
                     break;
             }
+
         }
     }
 

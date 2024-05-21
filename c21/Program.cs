@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 using System.Numerics;
 using Microsoft.VisualBasic;
 
@@ -16,7 +16,6 @@ public class sarklas
     public static void Main(String[] args)
     {
         System.Console.WriteLine();
-        
     }
 
     // public static t[] apply<t>(t[] x, t[] y,sumop<t> op)
@@ -29,11 +28,16 @@ public class sarklas
     //     return result;
     // }
 
-    Tuple<int> a = 
+    // Tuple<int> a = 
 
     var a = Tuple.Create("ali" , 2); 
 
     var b = Tuple.Create("reza",7);
+
+    var c = (ca:"ali" , ba: 1000);
 }
 
-
+public class jalase2
+{
+    VariantType caa=(caaaass: "ajl", saaboo:322);
+}
