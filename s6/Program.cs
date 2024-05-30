@@ -38,7 +38,7 @@ class mashgh
         {
             string[] v;
             v=File.readAllText(esmfile);
-            v=v.remove(parse(dastoor[1],parse(datoor[1])));
+            v=v.remove(int.Parse(dastoor[1],parse(datoor[1])));
             File.WraiteAllText(esmfile,v);
         }
         if(barresi(amalgar,"remove")==1)

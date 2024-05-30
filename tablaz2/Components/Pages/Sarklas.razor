@@ -1,0 +1,20 @@
+@page "/kelas"
+
+<h1>@kl.name</h1>
+
+    <InputText @bind-Value="@kl.name"></InputText>
+
+@code {
+    public class kelas
+    {
+        public string? name{get ; set ;}
+    }
+
+    public kelas kl ;
+
+    protected override void OnInitialized()
+    {
+        kl=new kelas();
+        kl.name="nammaloom";
+    }
+}

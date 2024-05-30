@@ -1,0 +1,55 @@
+﻿@page "/dovoomsarkelas"
+
+<h3>tamrinsarklas</h3>
+
+
+<input @bind-value="@s1">
+<input @bind-value="@s2">
+<button @onclick= "addmikonam" >bezan room</button>
+@{
+<ul>
+    <li>
+        @foreach(var chiz in karha)
+        {
+            <p>
+                @chiz.sa1
+                @chiz.sa2
+            </p>
+        }
+    </li>
+</ul>
+}
+
+@code {
+
+    string? s1 ; 
+    string? s2;
+    public class todo 
+    {
+
+        public todo(string a1 , string a2)
+        {
+            sa1=a1;
+            sa2=a2;
+        }
+
+        public string sa1 {get ; set ;}
+        public string sa2 {get ; set ;}
+
+
+    }
+
+    List<todo> karha ; 
+    protected override void OnInitialized()
+    {
+        karha = new List<todo>();
+        karha.Add(new todo("s1" , "s2"));
+    }
+
+    public void addmikonam()
+    {
+        
+        if(s1!=null && s2!=null)
+            karha.Add(new todo(s1 , s2));
+    }
+}
