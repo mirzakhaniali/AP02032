@@ -8,8 +8,8 @@ public class FullName
 
     public FullName(string firstName, string lastName)
     {
-        FirstName = firstName;
-        LastName = lastName;
+        this.FirstName = firstName;
+        this.LastName = lastName;
     }
 
     public override bool Equals(object obj)

@@ -14,6 +14,7 @@ public partial class Basics
 
     public static void Q0_Reverse(int[] nums)
     {
+        /* اینا هر دوش کار میکنه . رفتیم جلو کلین کدش کردم  */
         // if(nums.Length==0)
         //     return;
         // int[] ba_in_kar_mikonim=new int[nums.Length];
@@ -25,7 +26,9 @@ public partial class Basics
         // ba_in_kar_mikonim[nums.Length-1]=nums[nums.Length-1];
         // for (int i=1;i<nums.Length;i++)
         //     nums[i]=ba_in_kar_mikonim[i];
-        Basics.Q2_Reverse(nums);
+
+
+        Basics.Q2_Reverse<int>(nums);
     }
 
     public static int[] Q1_Reverse(int[] nums)
@@ -42,11 +45,11 @@ public partial class Basics
         return ba_in_kar_mikonim;
     }
 
-    public static void Q2_Reverse<t>(t[] nums)
+    public static void Q2_Reverse<T>(T[] nums)
     {
         if(nums.Length==0)
             return;
-        t[]ba_in_kar_mikonim=new t[nums.Length];
+        T[] ba_in_kar_mikonim=new T[nums.Length];
         ba_in_kar_mikonim[0]=nums[0];
         for (int i=1;i<ba_in_kar_mikonim.Length;i++)
         {
@@ -62,16 +65,16 @@ public partial class Basics
         try
         {
             var ss=voroodi.Split('+');
-            if(ss[ss.Length-1]=="")
+            if(ss.Contains(""))
                 throw new InvalidDataException();
             List<int> ints=new List<int>();
             foreach(var k in ss)
                 ints.Add(int.Parse(k));
             return ints;
         }
-        catch(InvalidDataException)
+        catch(InvalidDataException ide)
         {
-            throw new InvalidDataException();
+            throw ide;
         }
     }
 
